@@ -10,7 +10,9 @@ Este diretório centraliza todos os projetos, algoritmos e estudos desenvolvidos
 
 \- `GA/`: feito pra praticar a implementação de algoritmos genéticos, sobre uma viagem, partindo de Natal-RN, passando por todos os estados do Brasil, e voltando pra Natal, buscando a rota de menor distância.
 
-\- `Fuzzy/`: feito pra praticar a implementação de lógica fuzzy, um controle básico de aceleração de um carro em movimento, com as variáveis de entrada 'distância do carro á frente' e 'velocidade atual', e a variável de saída 'aceleração'
+\- `Fuzzy/`: feito pra praticar a implementação de lógica fuzzy, um controle básico de aceleração de um carro em movimento, com as variáveis de entrada 'distância do carro á frente' e 'velocidade atual', e a variável de saída 'aceleração'.
+
+\- `ML/`: feito pra praticar a implementação de machine learning, tanto supervisionado, quanto não-supervisionado, no contexto das problemáticas escolhidas, uma pra regressão, e outra pra classificação. (por enquanto só a regressão)
 
 
 
@@ -18,7 +20,7 @@ Este diretório centraliza todos os projetos, algoritmos e estudos desenvolvidos
 
 \- Linguagem: Python
 
-\- Ferramentas: Jupyter Notebook(formato ipynb), VS Code
+\- Ferramentas: Jupyter Notebook(formato ipynb), VS Code, scikit-learn
 
 
 
