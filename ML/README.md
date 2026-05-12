@@ -22,7 +22,7 @@ O projeto está organizado de forma sequencial, onde cada notebook representa um
 
 
 
-\### 1. 🔍 Exploração e Preparação (`dataset\\\_ini.ipynb`)
+\### 1. 🔍 Exploração e Preparação (`dataset\_ini.ipynb`)
 
 Nesta etapa inicial, o foco é entender a natureza dos dados.
 
@@ -36,7 +36,7 @@ Nesta etapa inicial, o foco é entender a natureza dos dados.
 
 
 
-\### 2. 📉 Redução de Dimensionalidade (`pca\\\_pre\\\_supervision.ipynb`)
+\### 2. 📉 Redução de Dimensionalidade (`pca\_pre\_supervision.ipynb`)
 
 Antes da modelagem, aplicamos técnicas para lidar com a alta dimensionalidade e ruídos.
 
@@ -102,8 +102,6 @@ As seguintes ferramentas foram utilizadas no desenvolvimento deste projeto:
 
 &#x09;```bash
 
-
-
 &#x09;git clone \[https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
 
 
@@ -113,8 +111,6 @@ As seguintes ferramentas foram utilizadas no desenvolvimento deste projeto:
 
 
 &#x09;```bash
-
-
 
 &#x09;python -m venv .venv
 
@@ -128,8 +124,6 @@ As seguintes ferramentas foram utilizadas no desenvolvimento deste projeto:
 
 &#x09;```bash
 
-
-
 &#x09;pip install pandas numpy scikit-learn matplotlib seaborn notebook
 
 
@@ -139,8 +133,6 @@ As seguintes ferramentas foram utilizadas no desenvolvimento deste projeto:
 
 
 &#x09;```bash
-
-
 
 &#x09;jupyter notebook
 
