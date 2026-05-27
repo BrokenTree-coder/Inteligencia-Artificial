@@ -1,138 +1,67 @@
-\# 📊 Análise de Dados e Modelagem Preditiva: Do PCA a Regressões
+# 📊 Análise de Dados e Modelagem Preditiva: Regressão (NBA) e Classificação (Performance)
 
+Este repositório contém um projeto prático de Inteligência Artificial dividido em duas frentes de análise principais: previsão de sucesso de times da NBA (Regressão) e avaliação de performance física humana (Classificação). O pipeline abrange desde o tratamento dos dados brutos até a aplicação de técnicas de redução de dimensionalidade (PCA) e múltiplos algoritmos de aprendizado supervisionado e não supervisionado.
 
+---
 
-Este repositório contém um pipeline de Ciência de Dados dividido em três etapas principais, implementadas em Jupyter Notebooks. O projeto abrange desde a exploração inicial dos dados até a aplicação de técnicas de redução de dimensionalidade e algoritmos de aprendizado supervisionado para regressão.
+## 🏗️ Estrutura do Projeto
 
+O projeto resolve dois problemas distintos de Machine Learning, documentados em profundidade:
 
+### 1. 🏀 Regressão: Previsão de Sucesso na NBA
 
-\---
+**Objetivo:** Prever o número de vitórias de um time nos Playoffs utilizando exclusivamente suas estatísticas da temporada regular.
 
+* **Dataset:** Dados estatísticos extraídos via `nba_api` abrangendo as temporadas regulares de 1996 a 2024, totalizando cerca de 800 amostras.
+* **Engenharia de Atributos:** O dataset bruto de 47 colunas foi refinado para 13 variáveis relevantes (como `OFF_RATING`, `DEF_RATING`, `TS_PCT`, `PACE`), tendo `PLAYOFF_WINS` como variável alvo.
+* **Modelagem e Resultados:** Foram testados Regressão Linear, Decision Tree, Random Forest, XGBoost, SVR e Rede Neural (MLP). 
+* A **Rede Neural (MLP)** obteve a melhor performance, alcançando um $R^{2}$ de 0.49 e provando ser a mais eficaz para identificar a equipe campeã (previu 14.6 vitórias para o Boston Celtics na base de teste).
+* O **SVR** obteve o menor Erro Absoluto (MAE de 1.92), mas penalizou-se por ser conservador demais nas extremidades.
+* **Agrupamento:** O uso de K-Means e DBSCAN revelou que forçar os times em "prateleiras" isoladas não é o ideal, pois o nível técnico da NBA atua como um espectro contínuo.
 
+### 2. 🏃‍♂️ Classificação: Body Performance
 
-\## 🏗️ Estrutura do Projeto
+**Objetivo:** Classificar o desempenho físico de indivíduos em quatro categorias (A, B, C e D) baseando-se em métricas corporais e testes atléticos.
 
+* **Dataset:** Dados da Korea Sports Promotion Foundation via Kaggle, incluindo idade, percentual de gordura, pressão arterial, força de pegada, flexibilidade e saltos.
+* **Modelagem e Resultados:** Avaliamos Regressão Logística, SVM (SVC), Rede Neural (MLP), Árvore de Decisão, Random Forest e XGBoost.
+* Nos dados padronizados normais, o **XGBoost** liderou os resultados com uma acurácia de 76,30% e um ROC-AUC de 92,81%.
+* **Análise de PCA:** A aplicação do PCA para reduzir o problema a 2D explicou 63,58% da variância total, no entanto, impactou negativamente a performance preditiva, fazendo as acurácias dos modelos caírem para a faixa de 38% a 41%.
 
+---
 
-O projeto está organizado de forma sequencial, onde cada notebook representa uma fase do pipeline de Machine Learning:
+## 🛠️ Tecnologias e Bibliotecas
 
+As seguintes ferramentas compuseram o ambiente de desenvolvimento:
 
+* **Python 3**
+* **Pandas & NumPy:** Manipulação de dados, tratamento de nulos e normalização com `StandardScaler`.
+* **Scikit-learn:** Redução com PCA, algoritmos de clustering (K-Means, DBSCAN) e criação de pipelines de modelos de ML.
+* **XGBoost:** Otimização via gradient boosting para classificação e regressão.
+* **Matplotlib & Seaborn:** Criação de matrizes de confusão, correlação, Silhouette Plots e projeções 2D.
+* **Jupyter Notebook:** Ambiente de desenvolvimento para exploração interativa.
 
+---
 
+## 🚀 Como Executar o Projeto
 
+* Clone o repositório:
 
+```bash
+   git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
+   ```
 
-\### 1. 🔍 Exploração e Preparação (`dataset\_ini.ipynb`)
+* Crie e ative um ambiente virtual (recomendado):
 
-Nesta etapa inicial, o foco é entender a natureza dos dados.
+```bash
+   python -m venv .venv
+   source .venv/bin/activate  # No Linux/WSL
+   ```
 
-\- Carregamento do dataset.
+* Instale as dependências essenciais no .venv:
 
-\- Análise exploratória de dados (EDA).
+```bash
+   pip install pandas numpy scikit-learn xgboost matplotlib seaborn jupyer ipykernel
+   ```
 
-\- Tratamento de valores ausentes e limpeza de dados.
-
-\- Visualização de distribuições e correlações iniciais.
-
-
-
-\### 2. 📉 Redução de Dimensionalidade (`pca\_pre\_supervision.ipynb`)
-
-Antes da modelagem, aplicamos técnicas para lidar com a alta dimensionalidade e ruídos.
-
-\- Normalização/Padronização de dados.
-
-\- Implementação do \*\*Principal Component Analysis (PCA)\*\*.
-
-\- Análise da variância explicada para determinar o número ideal de componentes.
-
-\- Preparação do dataset "reduzido" para o aprendizado supervisionado.
-
-
-
-\### 3. 📈 Modelagem Preditiva (`regressions.ipynb`)
-
-A fase final onde os modelos são treinados para realizar predições.
-
-\- Divisão entre conjuntos de treino e teste.
-
-\- Implementação de diferentes algoritmos de \*\*Regressão\*\* (ex: Linear, Ridge, Lasso ou outros).
-
-\- Avaliação de métricas de performance (MSE, RMSE, R²).
-
-\- Comparação de resultados entre os dados originais e os dados processados via PCA.
-
-
-
-\---
-
-
-
-\## 🛠️ Tecnologias e Bibliotecas
-
-
-
-As seguintes ferramentas foram utilizadas no desenvolvimento deste projeto:
-
-
-
-\- Python 3
-
-\- Pandas \& NumPy: Manipulação e processamento de dados.
-
-\- Scikit-learn: Implementação de PCA e modelos de Machine Learning.
-
-\- Matplotlib \& Seaborn: Visualização de dados e gráficos estatísticos.
-
-\- Jupyter Notebook: Ambiente de desenvolvimento e documentação das análises.
-
-
-
-\---
-
-
-
-\## 🚀 Como Executar o Projeto
-
-
-
-1\. Clone o repositório:
-
-
-
-&#x09;```bash
-
-&#x09;git clone \[https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
-
-
-
-2\. Crie um ambiente virtual (recomendado):
-
-
-
-&#x09;```bash
-
-&#x09;python -m venv .venv
-
-&#x09;source .venv/bin/activate  # No Linux/WSL
-
-
-
-3\. Instale as dependências:
-
-
-
-&#x09;```bash
-
-&#x09;pip install pandas numpy scikit-learn matplotlib seaborn notebook
-
-
-
-4\. Inicie o Jupyter:
-
-
-
-&#x09;```bash
-
-&#x09;jupyter notebook
-
+* Agora voce pode refazer todas as etapas.
