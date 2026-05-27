@@ -1,30 +1,21 @@
-\# 🤖 Inteligência Artificial - Projetos Acadêmicos
-
-
+# 🤖 Inteligência Artificial - Projetos Acadêmicos
 
 Este diretório centraliza todos os projetos, algoritmos e estudos desenvolvidos por mim enquanto aprendo os fundamentos do desenvolvimento de inteligências artificiais. Aqui você encontrará desde buscas clássicas e lógica, até modelos de aprendizado de máquina e conceitos mais avançados de IA posteriormente.
 
+## 📂 Estrutura da Pasta
 
+- `GA/`: feito pra praticar a implementação de algoritmos genéticos, sobre uma viagem, partindo de Natal-RN, passando por todos os estados do Brasil, e voltando pra Natal, buscando a rota de menor distância.
 
-\## 📂 Estrutura da Pasta
+- `Fuzzy/`: feito pra praticar a implementação de lógica fuzzy, um controle básico de aceleração de um carro em movimento, com as variáveis de entrada 'distância do carro á frente' e 'velocidade atual', e a variável de saída 'aceleração'.
 
-\- `GA/`: feito pra praticar a implementação de algoritmos genéticos, sobre uma viagem, partindo de Natal-RN, passando por todos os estados do Brasil, e voltando pra Natal, buscando a rota de menor distância.
+- `ML/`: feito pra praticar a implementação de machine learning, tanto supervisionado, quanto não-supervisionado, no contexto das problemáticas escolhidas, uma pra regressão, e outra pra classificação.
 
-\- `Fuzzy/`: feito pra praticar a implementação de lógica fuzzy, um controle básico de aceleração de um carro em movimento, com as variáveis de entrada 'distância do carro á frente' e 'velocidade atual', e a variável de saída 'aceleração'.
+## 🛠️ Tecnologias Utilizadas
 
-\- `ML/`: feito pra praticar a implementação de machine learning, tanto supervisionado, quanto não-supervisionado, no contexto das problemáticas escolhidas, uma pra regressão, e outra pra classificação. (por enquanto só a regressão)
+- Linguagem: Python
 
+- Ferramentas: Jupyter Notebook(formato ipynb), VS Code, scikit-learn
 
+---
 
-\## 🛠️ Tecnologias Utilizadas
-
-\- Linguagem: Python
-
-\- Ferramentas: Jupyter Notebook(formato ipynb), VS Code, scikit-learn
-
-
-
-\---
-
-\*Desenvolvido por Jean Lucas de A. Lima\*
-
+### Desenvolvido por Jean Lucas de A. Lima
