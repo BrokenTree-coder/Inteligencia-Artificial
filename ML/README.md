@@ -61,7 +61,7 @@ As seguintes ferramentas compuseram o ambiente de desenvolvimento:
 * Instale as dependências essenciais no .venv:
 
 ```bash
-   pip install pandas numpy scikit-learn xgboost matplotlib seaborn jupyer ipykernel
+   pip install pandas numpy scikit-learn xgboost matplotlib seaborn jupyer ipykernel kagglehub
    ```
 
 * Agora voce pode refazer todas as etapas.
